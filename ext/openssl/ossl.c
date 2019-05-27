@@ -790,7 +790,7 @@ static void Init_ossl_locks(void)
  * This example creates a self-signed certificate using an RSA key and a SHA1
  * signature.
  *
- *   name = OpenSSL::X509::Name.parse 'CN=nobody/DC=example'
+ *   name = OpenSSL::X509::Name.parse '/CN=nobody/DC=example'
  *
  *   cert = OpenSSL::X509::Certificate.new
  *   cert.version = 2
@@ -871,7 +871,7 @@ static void Init_ossl_locks(void)
  * A CA certificate is created the same way we created a certificate above, but
  * with different extensions.
  *
- *   ca_name = OpenSSL::X509::Name.parse 'CN=ca/DC=example'
+ *   ca_name = OpenSSL::X509::Name.parse '/CN=ca/DC=example'
  *
  *   ca_cert = OpenSSL::X509::Certificate.new
  *   ca_cert.serial = 0
